@@ -1,5 +1,6 @@
 package com.example.dakka.API;
 
+import com.example.dakka.Model.Users.ResponModel;
 import com.example.dakka.Model.Wisata.ResponseModel;
 
 import retrofit2.Call;
@@ -13,6 +14,12 @@ public interface APIReq {
     @POST("selectall.php")
     Call<ResponseModel>selectAll(
             @Field("kategori")String kategori
+    );
+    @FormUrlEncoded
+    @POST("login.php")
+    Call<ResponModel>login(
+            @Field("username")String username,
+            @Field("password")String password
     );
 
     @FormUrlEncoded

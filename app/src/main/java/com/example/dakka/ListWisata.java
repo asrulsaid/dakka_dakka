@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.dakka.API.APIReq;
@@ -53,6 +54,7 @@ public class ListWisata extends AppCompatActivity {
         wisataArray.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                Log.d("hello", "onResponse: "+response.body().getResults());
                 ArrayList<com.example.dakka.Model.Wisata.Wisata> wisata = response.body().getResults();
                 wisataList.postValue(wisata);
                 wisataAdapter.setData(wisata);

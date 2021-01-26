@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
     private static Retrofit retrofit = null;
-    private static final String BASE_URL = "http://192.168.42.57/dakka/";
+    private static final String BASE_URL = "http://192.168.42.11:8080/dakka/";
     public static Retrofit getClient() {
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
             @Override

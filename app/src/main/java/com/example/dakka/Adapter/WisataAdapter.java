@@ -78,7 +78,7 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.WisataView
             deskripsi = itemView.findViewById(R.id.tv_deskripsi);
         }
         public void bind(Wisata wisata){
-            String imageUrl = "http://192.168.42.57/dakka/images/"+wisata.getFoto_wisata();
+            String imageUrl = "http://192.168.43.117:8080/dakka/images/"+wisata.getFoto_wisata();
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
